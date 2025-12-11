@@ -202,6 +202,9 @@ def create_seaborn_visualizations(results):
     
     Args:
         results: Dictionary containing analysis results
+        
+    Returns:
+        None. Saves visualizations to 'drone_analysis_seaborn.png'
     """
     print("\n" + "="*70)
     print("GENERATING SEABORN VISUALIZATIONS")
@@ -283,6 +286,9 @@ def create_folium_map(results):
     
     Args:
         results: Dictionary containing analysis results
+        
+    Returns:
+        None. Saves interactive map to 'drone_proliferation_map.html'
     """
     print("\n" + "="*70)
     print("GENERATING FOLIUM MAP VISUALIZATIONS")
@@ -379,6 +385,15 @@ def create_folium_map(results):
 def main():
     """
     Main function to run the complete drone proliferation analysis.
+    
+    This function orchestrates the entire analysis workflow:
+    1. Generates synthetic drone sighting data
+    2. Processes data using PySpark (aggregations, statistics)
+    3. Creates Seaborn visualizations (saved as PNG)
+    4. Creates Folium interactive map (saved as HTML)
+    
+    Returns:
+        None. Generates output files: drone_analysis_seaborn.png and drone_proliferation_map.html
     """
     print("\n" + "="*70)
     print("DRONE PROLIFERATION DATA ANALYSIS")
