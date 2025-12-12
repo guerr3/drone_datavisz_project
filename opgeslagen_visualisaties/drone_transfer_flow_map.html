@@ -1,0 +1,1177 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_d45b3e939cb320e198fae6ce243f1166 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+     <h3 align="center" style="font-size:16px"><b>Global Drone Transfers Flow (1995-2023)</b></h3>
+     
+    
+            <div class="folium-map" id="map_d45b3e939cb320e198fae6ce243f1166" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_d45b3e939cb320e198fae6ce243f1166 = L.map(
+                "map_d45b3e939cb320e198fae6ce243f1166",
+                {
+                    center: [20.0, 0.0],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 2,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_230869cfa97c38eaecc88898310176f9 = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 20,
+  "maxNativeZoom": 20,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e",
+  "subdomains": "abcd",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_230869cfa97c38eaecc88898310176f9.addTo(map_d45b3e939cb320e198fae6ce243f1166);
+        
+    
+            var poly_line_480f2d003b90c37f8eaea092ecdfd88d = L.polyline(
+                [[31.0461, 34.8516], [37.0902, -95.7129]],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "orange", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.6, "smoothFactor": 1.0, "stroke": true, "weight": 1.0}
+            ).addTo(map_d45b3e939cb320e198fae6ce243f1166);
+        
+    
+        var popup_4d290814d3af22fa47bfb0346f1ac0ed = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_2a6e045ad3ad12973736b47fccb50cbb = $(`<div id="html_2a6e045ad3ad12973736b47fccb50cbb" style="width: 100.0%; height: 100.0%;">Israel -> United States: 2 transfers</div>`)[0];
+                popup_4d290814d3af22fa47bfb0346f1ac0ed.setContent(html_2a6e045ad3ad12973736b47fccb50cbb);
+            
+        
+
+        poly_line_480f2d003b90c37f8eaea092ecdfd88d.bindPopup(popup_4d290814d3af22fa47bfb0346f1ac0ed)
+        ;
+
+        
+    
+    
+            var circle_marker_0799d14a85b7ecfd3250e5e6993537a2 = L.circleMarker(
+                [37.0902, -95.7129],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_d45b3e939cb320e198fae6ce243f1166);
+        
+    
+            var poly_line_88baaf02a05c6514a95fb912f95626e8 = L.polyline(
+                [[31.0461, 34.8516], [35.8617, 104.1954]],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "orange", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.6, "smoothFactor": 1.0, "stroke": true, "weight": 0.5}
+            ).addTo(map_d45b3e939cb320e198fae6ce243f1166);
+        
+    
+        var popup_9e6e87b853445bab7a21b271b450d69c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_c534e8dced0652f97a94f99200d6a24b = $(`<div id="html_c534e8dced0652f97a94f99200d6a24b" style="width: 100.0%; height: 100.0%;">Israel -> China: 1 transfers</div>`)[0];
+                popup_9e6e87b853445bab7a21b271b450d69c.setContent(html_c534e8dced0652f97a94f99200d6a24b);
+            
+        
+
+        poly_line_88baaf02a05c6514a95fb912f95626e8.bindPopup(popup_9e6e87b853445bab7a21b271b450d69c)
+        ;
+
+        
+    
+    
+            var circle_marker_a6f280335ab2f2c90ec929db9ca53b5c = L.circleMarker(
+                [35.8617, 104.1954],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_d45b3e939cb320e198fae6ce243f1166);
+        
+    
+            var poly_line_bc8e0bf16322e3d60eba6af03133a996 = L.polyline(
+                [[31.0461, 34.8516], [38.9637, 35.2433]],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "orange", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.6, "smoothFactor": 1.0, "stroke": true, "weight": 2.5}
+            ).addTo(map_d45b3e939cb320e198fae6ce243f1166);
+        
+    
+        var popup_2c92b126f0ee506b03874593e641446a = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_38ac5d3193b69194bc4651c4fbda41de = $(`<div id="html_38ac5d3193b69194bc4651c4fbda41de" style="width: 100.0%; height: 100.0%;">Israel -> Turkey: 5 transfers</div>`)[0];
+                popup_2c92b126f0ee506b03874593e641446a.setContent(html_38ac5d3193b69194bc4651c4fbda41de);
+            
+        
+
+        poly_line_bc8e0bf16322e3d60eba6af03133a996.bindPopup(popup_2c92b126f0ee506b03874593e641446a)
+        ;
+
+        
+    
+    
+            var circle_marker_fb21a78803e04de775d4a456f134b6fc = L.circleMarker(
+                [38.9637, 35.2433],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_d45b3e939cb320e198fae6ce243f1166);
+        
+    
+            var poly_line_ee24028aacc8a3c836001cc2ed50b10c = L.polyline(
+                [[37.0902, -95.7129], [38.9637, 35.2433]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.6, "smoothFactor": 1.0, "stroke": true, "weight": 1.0}
+            ).addTo(map_d45b3e939cb320e198fae6ce243f1166);
+        
+    
+        var popup_71b51da91be9b543d6bb7dba66bd6b2c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_f1bcde2e48a43cc3553bde68771bc486 = $(`<div id="html_f1bcde2e48a43cc3553bde68771bc486" style="width: 100.0%; height: 100.0%;">United States -> Turkey: 2 transfers</div>`)[0];
+                popup_71b51da91be9b543d6bb7dba66bd6b2c.setContent(html_f1bcde2e48a43cc3553bde68771bc486);
+            
+        
+
+        poly_line_ee24028aacc8a3c836001cc2ed50b10c.bindPopup(popup_71b51da91be9b543d6bb7dba66bd6b2c)
+        ;
+
+        
+    
+    
+            var circle_marker_521fde8c25f3d79ff9abc47d6c6c0e45 = L.circleMarker(
+                [38.9637, 35.2433],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_d45b3e939cb320e198fae6ce243f1166);
+        
+    
+            var poly_line_79d95b18d3fca359e4c5f8ed75c69100 = L.polyline(
+                [[23.4241, 53.8478], [61.524, 105.3188]],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "white", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.6, "smoothFactor": 1.0, "stroke": true, "weight": 0.5}
+            ).addTo(map_d45b3e939cb320e198fae6ce243f1166);
+        
+    
+        var popup_d7339a776603b353db746621ed2aeecd = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_7ca7d4889ff77815f16965b5a58fb71e = $(`<div id="html_7ca7d4889ff77815f16965b5a58fb71e" style="width: 100.0%; height: 100.0%;">UAE -> Russia: 1 transfers</div>`)[0];
+                popup_d7339a776603b353db746621ed2aeecd.setContent(html_7ca7d4889ff77815f16965b5a58fb71e);
+            
+        
+
+        poly_line_79d95b18d3fca359e4c5f8ed75c69100.bindPopup(popup_d7339a776603b353db746621ed2aeecd)
+        ;
+
+        
+    
+    
+            var circle_marker_c15aa793c947f7928b60cc0b28702c9d = L.circleMarker(
+                [61.524, 105.3188],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "white", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_d45b3e939cb320e198fae6ce243f1166);
+        
+    
+            var poly_line_9965f5b397c90e8d943262fb226134ec = L.polyline(
+                [[32.4279, 53.688], [61.524, 105.3188]],
+                {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "purple", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.6, "smoothFactor": 1.0, "stroke": true, "weight": 1.5}
+            ).addTo(map_d45b3e939cb320e198fae6ce243f1166);
+        
+    
+        var popup_57adf32aca030f59e02a73ce57a5a06e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b8550a7d8eec4084d136cdd7285340af = $(`<div id="html_b8550a7d8eec4084d136cdd7285340af" style="width: 100.0%; height: 100.0%;">Iran -> Russia: 3 transfers</div>`)[0];
+                popup_57adf32aca030f59e02a73ce57a5a06e.setContent(html_b8550a7d8eec4084d136cdd7285340af);
+            
+        
+
+        poly_line_9965f5b397c90e8d943262fb226134ec.bindPopup(popup_57adf32aca030f59e02a73ce57a5a06e)
+        ;
+
+        
+    
+    
+            var circle_marker_01dcf3a1a9d19ad88fa154fff0f4e06f = L.circleMarker(
+                [61.524, 105.3188],
+                {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_d45b3e939cb320e198fae6ce243f1166);
+        
+    
+            var poly_line_9be15af005f49655eff7f0e27b2dc272 = L.polyline(
+                [[31.0461, 34.8516], [61.524, 105.3188]],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "orange", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.6, "smoothFactor": 1.0, "stroke": true, "weight": 2.5}
+            ).addTo(map_d45b3e939cb320e198fae6ce243f1166);
+        
+    
+        var popup_15273c4b03cf4e28d94c931b78688799 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_2dca0270cf8d77f33c0dbb24883d10eb = $(`<div id="html_2dca0270cf8d77f33c0dbb24883d10eb" style="width: 100.0%; height: 100.0%;">Israel -> Russia: 5 transfers</div>`)[0];
+                popup_15273c4b03cf4e28d94c931b78688799.setContent(html_2dca0270cf8d77f33c0dbb24883d10eb);
+            
+        
+
+        poly_line_9be15af005f49655eff7f0e27b2dc272.bindPopup(popup_15273c4b03cf4e28d94c931b78688799)
+        ;
+
+        
+    
+    
+            var circle_marker_23ff679bb8c4fed02e6029c49a1bcd0a = L.circleMarker(
+                [61.524, 105.3188],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_d45b3e939cb320e198fae6ce243f1166);
+        
+    
+            var poly_line_f97c0f9fcfac7a256cb4e25af6c43d15 = L.polyline(
+                [[51.9194, 19.1451], [48.3794, 31.1656]],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "white", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.6, "smoothFactor": 1.0, "stroke": true, "weight": 1.5}
+            ).addTo(map_d45b3e939cb320e198fae6ce243f1166);
+        
+    
+        var popup_5558890552330bfa248014ca4154b39e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_a18c160f25d0d33d374ab53aea8fdf5b = $(`<div id="html_a18c160f25d0d33d374ab53aea8fdf5b" style="width: 100.0%; height: 100.0%;">Poland -> Ukraine: 3 transfers</div>`)[0];
+                popup_5558890552330bfa248014ca4154b39e.setContent(html_a18c160f25d0d33d374ab53aea8fdf5b);
+            
+        
+
+        poly_line_f97c0f9fcfac7a256cb4e25af6c43d15.bindPopup(popup_5558890552330bfa248014ca4154b39e)
+        ;
+
+        
+    
+    
+            var circle_marker_4e0adc8075f0815421cd08116eeaae90 = L.circleMarker(
+                [48.3794, 31.1656],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "white", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_d45b3e939cb320e198fae6ce243f1166);
+        
+    
+            var poly_line_a55d124097001966017938ddc61fbbae = L.polyline(
+                [[51.1657, 10.4515], [48.3794, 31.1656]],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "white", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.6, "smoothFactor": 1.0, "stroke": true, "weight": 2.0}
+            ).addTo(map_d45b3e939cb320e198fae6ce243f1166);
+        
+    
+        var popup_9d13a5d098736f5ea0f2c787a1a7bd23 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_df5ea5900cd1e93fab59d20ecc1604ca = $(`<div id="html_df5ea5900cd1e93fab59d20ecc1604ca" style="width: 100.0%; height: 100.0%;">Germany -> Ukraine: 4 transfers</div>`)[0];
+                popup_9d13a5d098736f5ea0f2c787a1a7bd23.setContent(html_df5ea5900cd1e93fab59d20ecc1604ca);
+            
+        
+
+        poly_line_a55d124097001966017938ddc61fbbae.bindPopup(popup_9d13a5d098736f5ea0f2c787a1a7bd23)
+        ;
+
+        
+    
+    
+            var circle_marker_b3735e17ad3fec99cbae844867719c62 = L.circleMarker(
+                [48.3794, 31.1656],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "white", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_d45b3e939cb320e198fae6ce243f1166);
+        
+    
+            var poly_line_ed5ffc498358f33ba21e4ed3018078b7 = L.polyline(
+                [[55.3781, -3.436], [48.3794, 31.1656]],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "white", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.6, "smoothFactor": 1.0, "stroke": true, "weight": 0.5}
+            ).addTo(map_d45b3e939cb320e198fae6ce243f1166);
+        
+    
+        var popup_9074c056b342764150f705edaed53626 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_c9bc4cc3f9475f39df2a6e22c0416b2b = $(`<div id="html_c9bc4cc3f9475f39df2a6e22c0416b2b" style="width: 100.0%; height: 100.0%;">United Kingdom -> Ukraine: 1 transfers</div>`)[0];
+                popup_9074c056b342764150f705edaed53626.setContent(html_c9bc4cc3f9475f39df2a6e22c0416b2b);
+            
+        
+
+        poly_line_ed5ffc498358f33ba21e4ed3018078b7.bindPopup(popup_9074c056b342764150f705edaed53626)
+        ;
+
+        
+    
+    
+            var circle_marker_ffbd291cb0e30aa621f1503d65be2858 = L.circleMarker(
+                [48.3794, 31.1656],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "white", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_d45b3e939cb320e198fae6ce243f1166);
+        
+    
+            var poly_line_9aa04c543dd06e4d338a50e1f21b0965 = L.polyline(
+                [[38.9637, 35.2433], [48.3794, 31.1656]],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.6, "smoothFactor": 1.0, "stroke": true, "weight": 2.5}
+            ).addTo(map_d45b3e939cb320e198fae6ce243f1166);
+        
+    
+        var popup_8d934604d42fbcbd3ede31a8a03dc9b2 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_543d655c21e905d3aa76f697a8a41670 = $(`<div id="html_543d655c21e905d3aa76f697a8a41670" style="width: 100.0%; height: 100.0%;">Turkey -> Ukraine: 5 transfers</div>`)[0];
+                popup_8d934604d42fbcbd3ede31a8a03dc9b2.setContent(html_543d655c21e905d3aa76f697a8a41670);
+            
+        
+
+        poly_line_9aa04c543dd06e4d338a50e1f21b0965.bindPopup(popup_8d934604d42fbcbd3ede31a8a03dc9b2)
+        ;
+
+        
+    
+    
+            var circle_marker_28c0a4ea9536682d08a8501890f365f3 = L.circleMarker(
+                [48.3794, 31.1656],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_d45b3e939cb320e198fae6ce243f1166);
+        
+    
+            var poly_line_adc198b37bffa17fcd64ebd025014977 = L.polyline(
+                [[37.0902, -95.7129], [48.3794, 31.1656]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.6, "smoothFactor": 1.0, "stroke": true, "weight": 5}
+            ).addTo(map_d45b3e939cb320e198fae6ce243f1166);
+        
+    
+        var popup_d089858f29ecb46eb9e1fe2b9c5ce176 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b3f555e9545f61a39b253190d993c91f = $(`<div id="html_b3f555e9545f61a39b253190d993c91f" style="width: 100.0%; height: 100.0%;">United States -> Ukraine: 12 transfers</div>`)[0];
+                popup_d089858f29ecb46eb9e1fe2b9c5ce176.setContent(html_b3f555e9545f61a39b253190d993c91f);
+            
+        
+
+        poly_line_adc198b37bffa17fcd64ebd025014977.bindPopup(popup_d089858f29ecb46eb9e1fe2b9c5ce176)
+        ;
+
+        
+    
+    
+            var circle_marker_cc0ddc1e0ccaf1d812cffdd81c26124d = L.circleMarker(
+                [48.3794, 31.1656],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_d45b3e939cb320e198fae6ce243f1166);
+        
+    
+            var poly_line_b04ba5389663bfdede250fff3ea1330a = L.polyline(
+                [[31.0461, 34.8516], [55.3781, -3.436]],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "orange", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.6, "smoothFactor": 1.0, "stroke": true, "weight": 1.5}
+            ).addTo(map_d45b3e939cb320e198fae6ce243f1166);
+        
+    
+        var popup_dfa45f44f6fafd9cf2493edc89cc886b = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_4d07ed241deca755ab957b938b732c45 = $(`<div id="html_4d07ed241deca755ab957b938b732c45" style="width: 100.0%; height: 100.0%;">Israel -> United Kingdom: 3 transfers</div>`)[0];
+                popup_dfa45f44f6fafd9cf2493edc89cc886b.setContent(html_4d07ed241deca755ab957b938b732c45);
+            
+        
+
+        poly_line_b04ba5389663bfdede250fff3ea1330a.bindPopup(popup_dfa45f44f6fafd9cf2493edc89cc886b)
+        ;
+
+        
+    
+    
+            var circle_marker_f9ac4ca399392e835a41d065edf9c1c7 = L.circleMarker(
+                [55.3781, -3.436],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_d45b3e939cb320e198fae6ce243f1166);
+        
+    
+            var poly_line_a8e7b825730246a77ea004da939a94b8 = L.polyline(
+                [[37.0902, -95.7129], [55.3781, -3.436]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.6, "smoothFactor": 1.0, "stroke": true, "weight": 4.5}
+            ).addTo(map_d45b3e939cb320e198fae6ce243f1166);
+        
+    
+        var popup_08f1825b5f9b1c753cf6c1f4922b3d74 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_ae3ab2411320625cbad94c3022ac8bee = $(`<div id="html_ae3ab2411320625cbad94c3022ac8bee" style="width: 100.0%; height: 100.0%;">United States -> United Kingdom: 9 transfers</div>`)[0];
+                popup_08f1825b5f9b1c753cf6c1f4922b3d74.setContent(html_ae3ab2411320625cbad94c3022ac8bee);
+            
+        
+
+        poly_line_a8e7b825730246a77ea004da939a94b8.bindPopup(popup_08f1825b5f9b1c753cf6c1f4922b3d74)
+        ;
+
+        
+    
+    
+            var circle_marker_11c3972ad18c1523a1a370426265ade2 = L.circleMarker(
+                [55.3781, -3.436],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_d45b3e939cb320e198fae6ce243f1166);
+        
+    
+            var poly_line_2570327e4e450bd5d0efca9f76339778 = L.polyline(
+                [[51.1657, 10.4515], [46.2276, 2.2137]],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "white", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.6, "smoothFactor": 1.0, "stroke": true, "weight": 0.5}
+            ).addTo(map_d45b3e939cb320e198fae6ce243f1166);
+        
+    
+        var popup_d69295c07a3766990e4e1356100a62d0 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b9653a1eabe6c4307d7f3ab1e6e1a39a = $(`<div id="html_b9653a1eabe6c4307d7f3ab1e6e1a39a" style="width: 100.0%; height: 100.0%;">Germany -> France: 1 transfers</div>`)[0];
+                popup_d69295c07a3766990e4e1356100a62d0.setContent(html_b9653a1eabe6c4307d7f3ab1e6e1a39a);
+            
+        
+
+        poly_line_2570327e4e450bd5d0efca9f76339778.bindPopup(popup_d69295c07a3766990e4e1356100a62d0)
+        ;
+
+        
+    
+    
+            var circle_marker_3b52f241f9b97c3e1231ba67e89473ca = L.circleMarker(
+                [46.2276, 2.2137],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "white", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_d45b3e939cb320e198fae6ce243f1166);
+        
+    
+            var poly_line_994c46d28379946e6785f5372f4bd0ff = L.polyline(
+                [[31.0461, 34.8516], [46.2276, 2.2137]],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "orange", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.6, "smoothFactor": 1.0, "stroke": true, "weight": 3.0}
+            ).addTo(map_d45b3e939cb320e198fae6ce243f1166);
+        
+    
+        var popup_ae30cbe8ca83959fe4284a308a7479f0 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_6fa3a850efd8a2e6a0efc684f763eb48 = $(`<div id="html_6fa3a850efd8a2e6a0efc684f763eb48" style="width: 100.0%; height: 100.0%;">Israel -> France: 6 transfers</div>`)[0];
+                popup_ae30cbe8ca83959fe4284a308a7479f0.setContent(html_6fa3a850efd8a2e6a0efc684f763eb48);
+            
+        
+
+        poly_line_994c46d28379946e6785f5372f4bd0ff.bindPopup(popup_ae30cbe8ca83959fe4284a308a7479f0)
+        ;
+
+        
+    
+    
+            var circle_marker_0b834220f5d1a52a45875e782d0bfaff = L.circleMarker(
+                [46.2276, 2.2137],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_d45b3e939cb320e198fae6ce243f1166);
+        
+    
+            var poly_line_25cd1cd6c61d108492a594aa80f6b302 = L.polyline(
+                [[37.0902, -95.7129], [46.2276, 2.2137]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.6, "smoothFactor": 1.0, "stroke": true, "weight": 2.5}
+            ).addTo(map_d45b3e939cb320e198fae6ce243f1166);
+        
+    
+        var popup_ac2d794e2a02204dcd816ad7ce5d338d = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_1a670bbff2208d1f6467d76940a870e2 = $(`<div id="html_1a670bbff2208d1f6467d76940a870e2" style="width: 100.0%; height: 100.0%;">United States -> France: 5 transfers</div>`)[0];
+                popup_ac2d794e2a02204dcd816ad7ce5d338d.setContent(html_1a670bbff2208d1f6467d76940a870e2);
+            
+        
+
+        poly_line_25cd1cd6c61d108492a594aa80f6b302.bindPopup(popup_ac2d794e2a02204dcd816ad7ce5d338d)
+        ;
+
+        
+    
+    
+            var circle_marker_e9d02ad3e455044185168e8bb7d48562 = L.circleMarker(
+                [46.2276, 2.2137],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_d45b3e939cb320e198fae6ce243f1166);
+        
+    
+            var poly_line_80f70cc1d25dbff5733fec080d12ff6f = L.polyline(
+                [[31.0461, 34.8516], [51.1657, 10.4515]],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "orange", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.6, "smoothFactor": 1.0, "stroke": true, "weight": 3.0}
+            ).addTo(map_d45b3e939cb320e198fae6ce243f1166);
+        
+    
+        var popup_8d70d44bfd0f6793ec7565504f1c1b57 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_3fb655d66001b96af4901fe844dc591d = $(`<div id="html_3fb655d66001b96af4901fe844dc591d" style="width: 100.0%; height: 100.0%;">Israel -> Germany: 6 transfers</div>`)[0];
+                popup_8d70d44bfd0f6793ec7565504f1c1b57.setContent(html_3fb655d66001b96af4901fe844dc591d);
+            
+        
+
+        poly_line_80f70cc1d25dbff5733fec080d12ff6f.bindPopup(popup_8d70d44bfd0f6793ec7565504f1c1b57)
+        ;
+
+        
+    
+    
+            var circle_marker_5041540177c485d7d4f32142c60c5db4 = L.circleMarker(
+                [51.1657, 10.4515],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_d45b3e939cb320e198fae6ce243f1166);
+        
+    
+            var poly_line_6409bc3ebb19da3979b30a88bdd78384 = L.polyline(
+                [[37.0902, -95.7129], [51.1657, 10.4515]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.6, "smoothFactor": 1.0, "stroke": true, "weight": 1.5}
+            ).addTo(map_d45b3e939cb320e198fae6ce243f1166);
+        
+    
+        var popup_28defd4adcdc8f376ef9c4371ded6187 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_9436a45491294c224b4aaf17fa8043c1 = $(`<div id="html_9436a45491294c224b4aaf17fa8043c1" style="width: 100.0%; height: 100.0%;">United States -> Germany: 3 transfers</div>`)[0];
+                popup_28defd4adcdc8f376ef9c4371ded6187.setContent(html_9436a45491294c224b4aaf17fa8043c1);
+            
+        
+
+        poly_line_6409bc3ebb19da3979b30a88bdd78384.bindPopup(popup_28defd4adcdc8f376ef9c4371ded6187)
+        ;
+
+        
+    
+    
+            var circle_marker_960cbd1632d7b147039519abbf38e1a4 = L.circleMarker(
+                [51.1657, 10.4515],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_d45b3e939cb320e198fae6ce243f1166);
+        
+    
+            var poly_line_9a7d08e5035e12a7f497bdac132a81ff = L.polyline(
+                [[38.9637, 35.2433], [51.9194, 19.1451]],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.6, "smoothFactor": 1.0, "stroke": true, "weight": 1.0}
+            ).addTo(map_d45b3e939cb320e198fae6ce243f1166);
+        
+    
+        var popup_23b844e795a76029719735ee34fd225a = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_a7179e5399fb63435568594981c9392e = $(`<div id="html_a7179e5399fb63435568594981c9392e" style="width: 100.0%; height: 100.0%;">Turkey -> Poland: 2 transfers</div>`)[0];
+                popup_23b844e795a76029719735ee34fd225a.setContent(html_a7179e5399fb63435568594981c9392e);
+            
+        
+
+        poly_line_9a7d08e5035e12a7f497bdac132a81ff.bindPopup(popup_23b844e795a76029719735ee34fd225a)
+        ;
+
+        
+    
+    
+            var circle_marker_7769315d85d01d5d5871fb4d48af7a04 = L.circleMarker(
+                [51.9194, 19.1451],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_d45b3e939cb320e198fae6ce243f1166);
+        
+    
+            var poly_line_9b850634c142c5c5741b9f7d3b745d83 = L.polyline(
+                [[31.0461, 34.8516], [51.9194, 19.1451]],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "orange", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.6, "smoothFactor": 1.0, "stroke": true, "weight": 2.0}
+            ).addTo(map_d45b3e939cb320e198fae6ce243f1166);
+        
+    
+        var popup_d7e926e69ec84aee03234ba5566a5fdd = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_710aa748ebfe4684c01155f188d84850 = $(`<div id="html_710aa748ebfe4684c01155f188d84850" style="width: 100.0%; height: 100.0%;">Israel -> Poland: 4 transfers</div>`)[0];
+                popup_d7e926e69ec84aee03234ba5566a5fdd.setContent(html_710aa748ebfe4684c01155f188d84850);
+            
+        
+
+        poly_line_9b850634c142c5c5741b9f7d3b745d83.bindPopup(popup_d7e926e69ec84aee03234ba5566a5fdd)
+        ;
+
+        
+    
+    
+            var circle_marker_0a78c21d2ecdd540ce494bf8634da908 = L.circleMarker(
+                [51.9194, 19.1451],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_d45b3e939cb320e198fae6ce243f1166);
+        
+    
+            var poly_line_4b05a45be2a7d1e2ae4531d6bf9145ae = L.polyline(
+                [[37.0902, -95.7129], [51.9194, 19.1451]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.6, "smoothFactor": 1.0, "stroke": true, "weight": 2.5}
+            ).addTo(map_d45b3e939cb320e198fae6ce243f1166);
+        
+    
+        var popup_2034dbbd5642fc0bcc3478a250cc1670 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_27f37274ef5b28a6dd18500ce5aca7e0 = $(`<div id="html_27f37274ef5b28a6dd18500ce5aca7e0" style="width: 100.0%; height: 100.0%;">United States -> Poland: 5 transfers</div>`)[0];
+                popup_2034dbbd5642fc0bcc3478a250cc1670.setContent(html_27f37274ef5b28a6dd18500ce5aca7e0);
+            
+        
+
+        poly_line_4b05a45be2a7d1e2ae4531d6bf9145ae.bindPopup(popup_2034dbbd5642fc0bcc3478a250cc1670)
+        ;
+
+        
+    
+    
+            var circle_marker_6fafce63e7b709539b55c9027867ef6d = L.circleMarker(
+                [51.9194, 19.1451],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_d45b3e939cb320e198fae6ce243f1166);
+        
+    
+            var poly_line_6a9e0d9bc7f2e73da598108b5b47228b = L.polyline(
+                [[51.1657, 10.4515], [23.8859, 45.0792]],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "white", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.6, "smoothFactor": 1.0, "stroke": true, "weight": 0.5}
+            ).addTo(map_d45b3e939cb320e198fae6ce243f1166);
+        
+    
+        var popup_1a82b0e934cd0abc3f5396784457bda8 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_56b6dea98b40622734bfdd3044a6ae19 = $(`<div id="html_56b6dea98b40622734bfdd3044a6ae19" style="width: 100.0%; height: 100.0%;">Germany -> Saudi Arabia: 1 transfers</div>`)[0];
+                popup_1a82b0e934cd0abc3f5396784457bda8.setContent(html_56b6dea98b40622734bfdd3044a6ae19);
+            
+        
+
+        poly_line_6a9e0d9bc7f2e73da598108b5b47228b.bindPopup(popup_1a82b0e934cd0abc3f5396784457bda8)
+        ;
+
+        
+    
+    
+            var circle_marker_8abe3987c91502ce9dcf2a61dfc2fca3 = L.circleMarker(
+                [23.8859, 45.0792],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "white", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_d45b3e939cb320e198fae6ce243f1166);
+        
+    
+            var poly_line_10a42128842ea0f5cd1e15c5523f3210 = L.polyline(
+                [[38.9637, 35.2433], [23.8859, 45.0792]],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.6, "smoothFactor": 1.0, "stroke": true, "weight": 1.5}
+            ).addTo(map_d45b3e939cb320e198fae6ce243f1166);
+        
+    
+        var popup_68297dc7f88ad74b028bbb9fcd64ff54 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_bb8daae1a3d47c1bbaf235ecf2eb3eba = $(`<div id="html_bb8daae1a3d47c1bbaf235ecf2eb3eba" style="width: 100.0%; height: 100.0%;">Turkey -> Saudi Arabia: 3 transfers</div>`)[0];
+                popup_68297dc7f88ad74b028bbb9fcd64ff54.setContent(html_bb8daae1a3d47c1bbaf235ecf2eb3eba);
+            
+        
+
+        poly_line_10a42128842ea0f5cd1e15c5523f3210.bindPopup(popup_68297dc7f88ad74b028bbb9fcd64ff54)
+        ;
+
+        
+    
+    
+            var circle_marker_09b9a7b7675262cf7d802b1eb104e589 = L.circleMarker(
+                [23.8859, 45.0792],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_d45b3e939cb320e198fae6ce243f1166);
+        
+    
+            var poly_line_96ff72ddde5528b4a8b7205dfa87b4f7 = L.polyline(
+                [[35.8617, 104.1954], [23.8859, 45.0792]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.6, "smoothFactor": 1.0, "stroke": true, "weight": 2.0}
+            ).addTo(map_d45b3e939cb320e198fae6ce243f1166);
+        
+    
+        var popup_8574f06b0d342e09d49add039191a82b = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_79f7bac0196fc001e6e50a20fa815d94 = $(`<div id="html_79f7bac0196fc001e6e50a20fa815d94" style="width: 100.0%; height: 100.0%;">China -> Saudi Arabia: 4 transfers</div>`)[0];
+                popup_8574f06b0d342e09d49add039191a82b.setContent(html_79f7bac0196fc001e6e50a20fa815d94);
+            
+        
+
+        poly_line_96ff72ddde5528b4a8b7205dfa87b4f7.bindPopup(popup_8574f06b0d342e09d49add039191a82b)
+        ;
+
+        
+    
+    
+            var circle_marker_baac71231d31be5b6445fe4d3e7971a6 = L.circleMarker(
+                [23.8859, 45.0792],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_d45b3e939cb320e198fae6ce243f1166);
+        
+    
+            var poly_line_72ee9406c51fa2ec5487d3291611b1f1 = L.polyline(
+                [[51.1657, 10.4515], [30.3753, 69.3451]],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "white", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.6, "smoothFactor": 1.0, "stroke": true, "weight": 1.0}
+            ).addTo(map_d45b3e939cb320e198fae6ce243f1166);
+        
+    
+        var popup_caf74d04c4e9254b08013f2961b458e4 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_f3958bf531cc5c40ef4f501c84fa9d78 = $(`<div id="html_f3958bf531cc5c40ef4f501c84fa9d78" style="width: 100.0%; height: 100.0%;">Germany -> Pakistan: 2 transfers</div>`)[0];
+                popup_caf74d04c4e9254b08013f2961b458e4.setContent(html_f3958bf531cc5c40ef4f501c84fa9d78);
+            
+        
+
+        poly_line_72ee9406c51fa2ec5487d3291611b1f1.bindPopup(popup_caf74d04c4e9254b08013f2961b458e4)
+        ;
+
+        
+    
+    
+            var circle_marker_5f83428548c37513d192a8da58ce290a = L.circleMarker(
+                [30.3753, 69.3451],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "white", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_d45b3e939cb320e198fae6ce243f1166);
+        
+    
+            var poly_line_b2fd00048dc6731e717528392dc14768 = L.polyline(
+                [[38.9637, 35.2433], [30.3753, 69.3451]],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.6, "smoothFactor": 1.0, "stroke": true, "weight": 1.0}
+            ).addTo(map_d45b3e939cb320e198fae6ce243f1166);
+        
+    
+        var popup_eccacd7efa25af8a38d8a2c1d501566e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_e1139190dad148544f896e01343c6e0a = $(`<div id="html_e1139190dad148544f896e01343c6e0a" style="width: 100.0%; height: 100.0%;">Turkey -> Pakistan: 2 transfers</div>`)[0];
+                popup_eccacd7efa25af8a38d8a2c1d501566e.setContent(html_e1139190dad148544f896e01343c6e0a);
+            
+        
+
+        poly_line_b2fd00048dc6731e717528392dc14768.bindPopup(popup_eccacd7efa25af8a38d8a2c1d501566e)
+        ;
+
+        
+    
+    
+            var circle_marker_ce9db268219db7ccd404d60a7d1aaa12 = L.circleMarker(
+                [30.3753, 69.3451],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_d45b3e939cb320e198fae6ce243f1166);
+        
+    
+            var poly_line_9e34fcf1fe2446eabafea9e6a53bc920 = L.polyline(
+                [[35.8617, 104.1954], [30.3753, 69.3451]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.6, "smoothFactor": 1.0, "stroke": true, "weight": 2.0}
+            ).addTo(map_d45b3e939cb320e198fae6ce243f1166);
+        
+    
+        var popup_4050e2ef61a1b102ca1b804c2a76f031 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b07d6b37a8255e0cd3d8cae90ba2baec = $(`<div id="html_b07d6b37a8255e0cd3d8cae90ba2baec" style="width: 100.0%; height: 100.0%;">China -> Pakistan: 4 transfers</div>`)[0];
+                popup_4050e2ef61a1b102ca1b804c2a76f031.setContent(html_b07d6b37a8255e0cd3d8cae90ba2baec);
+            
+        
+
+        poly_line_9e34fcf1fe2446eabafea9e6a53bc920.bindPopup(popup_4050e2ef61a1b102ca1b804c2a76f031)
+        ;
+
+        
+    
+    
+            var circle_marker_200e2380863f07e4196c832d7f0f10e3 = L.circleMarker(
+                [30.3753, 69.3451],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_d45b3e939cb320e198fae6ce243f1166);
+        
+    
+            var poly_line_a3382265dd0248d739c6e820127258de = L.polyline(
+                [[37.0902, -95.7129], [30.3753, 69.3451]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.6, "smoothFactor": 1.0, "stroke": true, "weight": 2.0}
+            ).addTo(map_d45b3e939cb320e198fae6ce243f1166);
+        
+    
+        var popup_93942b545df9489ca41853d3be4b4267 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d93cb387539a9c11fc90533b043ab1ed = $(`<div id="html_d93cb387539a9c11fc90533b043ab1ed" style="width: 100.0%; height: 100.0%;">United States -> Pakistan: 4 transfers</div>`)[0];
+                popup_93942b545df9489ca41853d3be4b4267.setContent(html_d93cb387539a9c11fc90533b043ab1ed);
+            
+        
+
+        poly_line_a3382265dd0248d739c6e820127258de.bindPopup(popup_93942b545df9489ca41853d3be4b4267)
+        ;
+
+        
+    
+    
+            var circle_marker_2844d134912aced748a6d67ae9d766f3 = L.circleMarker(
+                [30.3753, 69.3451],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_d45b3e939cb320e198fae6ce243f1166);
+        
+    
+            var poly_line_10b7516b6a09c7052e4572898d9894b5 = L.polyline(
+                [[51.9194, 19.1451], [20.5937, 78.9629]],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "white", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.6, "smoothFactor": 1.0, "stroke": true, "weight": 0.5}
+            ).addTo(map_d45b3e939cb320e198fae6ce243f1166);
+        
+    
+        var popup_35ee2ae408fede779c81a33761436ed3 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_13a904190d143b21490dc7cb276af36d = $(`<div id="html_13a904190d143b21490dc7cb276af36d" style="width: 100.0%; height: 100.0%;">Poland -> India: 1 transfers</div>`)[0];
+                popup_35ee2ae408fede779c81a33761436ed3.setContent(html_13a904190d143b21490dc7cb276af36d);
+            
+        
+
+        poly_line_10b7516b6a09c7052e4572898d9894b5.bindPopup(popup_35ee2ae408fede779c81a33761436ed3)
+        ;
+
+        
+    
+    
+            var circle_marker_f28d789d7e59ebff2c136abc7e8b292b = L.circleMarker(
+                [20.5937, 78.9629],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "white", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_d45b3e939cb320e198fae6ce243f1166);
+        
+    
+            var poly_line_4efdb8acaca73dcfe5746a6aac4b4823 = L.polyline(
+                [[31.0461, 34.8516], [20.5937, 78.9629]],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "orange", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.6, "smoothFactor": 1.0, "stroke": true, "weight": 5}
+            ).addTo(map_d45b3e939cb320e198fae6ce243f1166);
+        
+    
+        var popup_636292a3c385abda59b1d5b368aeecf5 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d47067cc559c03b7d4448feb9a1dbed2 = $(`<div id="html_d47067cc559c03b7d4448feb9a1dbed2" style="width: 100.0%; height: 100.0%;">Israel -> India: 20 transfers</div>`)[0];
+                popup_636292a3c385abda59b1d5b368aeecf5.setContent(html_d47067cc559c03b7d4448feb9a1dbed2);
+            
+        
+
+        poly_line_4efdb8acaca73dcfe5746a6aac4b4823.bindPopup(popup_636292a3c385abda59b1d5b368aeecf5)
+        ;
+
+        
+    
+    
+            var circle_marker_530f713ae535a1999bb2fc50444e08e3 = L.circleMarker(
+                [20.5937, 78.9629],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_d45b3e939cb320e198fae6ce243f1166);
+        
+    
+            var poly_line_e937bf2fc0e5212bca31eaafc74a4ee2 = L.polyline(
+                [[37.0902, -95.7129], [20.5937, 78.9629]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.6, "smoothFactor": 1.0, "stroke": true, "weight": 1.0}
+            ).addTo(map_d45b3e939cb320e198fae6ce243f1166);
+        
+    
+        var popup_ef808270148ce52f7d1aa0c106471a13 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_a319951db5d674d71744c57ef2275803 = $(`<div id="html_a319951db5d674d71744c57ef2275803" style="width: 100.0%; height: 100.0%;">United States -> India: 2 transfers</div>`)[0];
+                popup_ef808270148ce52f7d1aa0c106471a13.setContent(html_a319951db5d674d71744c57ef2275803);
+            
+        
+
+        poly_line_e937bf2fc0e5212bca31eaafc74a4ee2.bindPopup(popup_ef808270148ce52f7d1aa0c106471a13)
+        ;
+
+        
+    
+    
+            var circle_marker_c66a1d64f90222c3592f20cdf3bb0ae6 = L.circleMarker(
+                [20.5937, 78.9629],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_d45b3e939cb320e198fae6ce243f1166);
+        
+    
+            var poly_line_1829c702e6d62c9b28df34316c14c58f = L.polyline(
+                [[23.4241, 53.8478], [9.082, 8.6753]],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "white", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.6, "smoothFactor": 1.0, "stroke": true, "weight": 0.5}
+            ).addTo(map_d45b3e939cb320e198fae6ce243f1166);
+        
+    
+        var popup_0f4782d9ad2ef4d70995d6737ee7c824 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_54cdab365d4396e50196b9fa4331ae3f = $(`<div id="html_54cdab365d4396e50196b9fa4331ae3f" style="width: 100.0%; height: 100.0%;">UAE -> Nigeria: 1 transfers</div>`)[0];
+                popup_0f4782d9ad2ef4d70995d6737ee7c824.setContent(html_54cdab365d4396e50196b9fa4331ae3f);
+            
+        
+
+        poly_line_1829c702e6d62c9b28df34316c14c58f.bindPopup(popup_0f4782d9ad2ef4d70995d6737ee7c824)
+        ;
+
+        
+    
+    
+            var circle_marker_6ab124c03604dcccb7b353058e0ca8eb = L.circleMarker(
+                [9.082, 8.6753],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "white", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_d45b3e939cb320e198fae6ce243f1166);
+        
+    
+            var poly_line_0ae8dbd9a815f08645746c4d77eb9fc2 = L.polyline(
+                [[38.9637, 35.2433], [9.082, 8.6753]],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.6, "smoothFactor": 1.0, "stroke": true, "weight": 1.5}
+            ).addTo(map_d45b3e939cb320e198fae6ce243f1166);
+        
+    
+        var popup_2e66e3a90cee9619d0d6c37c38277e7f = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_a3cb79ef7448262b7f0cc79ade3c412e = $(`<div id="html_a3cb79ef7448262b7f0cc79ade3c412e" style="width: 100.0%; height: 100.0%;">Turkey -> Nigeria: 3 transfers</div>`)[0];
+                popup_2e66e3a90cee9619d0d6c37c38277e7f.setContent(html_a3cb79ef7448262b7f0cc79ade3c412e);
+            
+        
+
+        poly_line_0ae8dbd9a815f08645746c4d77eb9fc2.bindPopup(popup_2e66e3a90cee9619d0d6c37c38277e7f)
+        ;
+
+        
+    
+    
+            var circle_marker_7d533e7ce011f5c85301ae32a21ff125 = L.circleMarker(
+                [9.082, 8.6753],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_d45b3e939cb320e198fae6ce243f1166);
+        
+    
+            var poly_line_551b21dafe6191742b5a960dcffc5fa2 = L.polyline(
+                [[35.8617, 104.1954], [9.082, 8.6753]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.6, "smoothFactor": 1.0, "stroke": true, "weight": 3.0}
+            ).addTo(map_d45b3e939cb320e198fae6ce243f1166);
+        
+    
+        var popup_02370c8e2182c5a2c1234f2a08b5efaa = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_1ff88dc8ad24472ec50a8bc324f9bb5b = $(`<div id="html_1ff88dc8ad24472ec50a8bc324f9bb5b" style="width: 100.0%; height: 100.0%;">China -> Nigeria: 6 transfers</div>`)[0];
+                popup_02370c8e2182c5a2c1234f2a08b5efaa.setContent(html_1ff88dc8ad24472ec50a8bc324f9bb5b);
+            
+        
+
+        poly_line_551b21dafe6191742b5a960dcffc5fa2.bindPopup(popup_02370c8e2182c5a2c1234f2a08b5efaa)
+        ;
+
+        
+    
+    
+            var circle_marker_949ac57baf02cf7240d1afcab4d8fb77 = L.circleMarker(
+                [9.082, 8.6753],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_d45b3e939cb320e198fae6ce243f1166);
+        
+    
+            var poly_line_5ab0ef5d458e00fe26754347e6e908bf = L.polyline(
+                [[31.0461, 34.8516], [9.082, 8.6753]],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "orange", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.6, "smoothFactor": 1.0, "stroke": true, "weight": 0.5}
+            ).addTo(map_d45b3e939cb320e198fae6ce243f1166);
+        
+    
+        var popup_6405e8b4355c3879bed93f6a39d42ea9 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_7c5d9210f0156fa5c5088addef584f79 = $(`<div id="html_7c5d9210f0156fa5c5088addef584f79" style="width: 100.0%; height: 100.0%;">Israel -> Nigeria: 1 transfers</div>`)[0];
+                popup_6405e8b4355c3879bed93f6a39d42ea9.setContent(html_7c5d9210f0156fa5c5088addef584f79);
+            
+        
+
+        poly_line_5ab0ef5d458e00fe26754347e6e908bf.bindPopup(popup_6405e8b4355c3879bed93f6a39d42ea9)
+        ;
+
+        
+    
+    
+            var circle_marker_e317e955322baab03e5a99cea762489d = L.circleMarker(
+                [9.082, 8.6753],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_d45b3e939cb320e198fae6ce243f1166);
+        
+    
+            var poly_line_f506225b428f87eb86e6743df604f21e = L.polyline(
+                [[37.0902, -95.7129], [9.082, 8.6753]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.6, "smoothFactor": 1.0, "stroke": true, "weight": 0.5}
+            ).addTo(map_d45b3e939cb320e198fae6ce243f1166);
+        
+    
+        var popup_af1c4c79c4d96ceae36967e221623d47 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_bda75e109cc1def031eeb8b7fd65b34c = $(`<div id="html_bda75e109cc1def031eeb8b7fd65b34c" style="width: 100.0%; height: 100.0%;">United States -> Nigeria: 1 transfers</div>`)[0];
+                popup_af1c4c79c4d96ceae36967e221623d47.setContent(html_bda75e109cc1def031eeb8b7fd65b34c);
+            
+        
+
+        poly_line_f506225b428f87eb86e6743df604f21e.bindPopup(popup_af1c4c79c4d96ceae36967e221623d47)
+        ;
+
+        
+    
+    
+            var circle_marker_d1fea3f7bfa5f88d08838f17966920f9 = L.circleMarker(
+                [9.082, 8.6753],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_d45b3e939cb320e198fae6ce243f1166);
+        
+</script>
+</html>

@@ -1,0 +1,731 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_3e522f4f6d4724663ac12e4d4adac8c7 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+<div style="position: fixed; bottom: 50px; left: 50px; width: 200px; 
+            background-color: white; border:2px solid grey; z-index:9999; 
+            font-size:14px; padding: 10px">
+<p><b>Success Rate</b></p>
+<p><i class="fa fa-circle" style="color:green"></i> >= 70%</p>
+<p><i class="fa fa-circle" style="color:orange"></i> 40-70%</p>
+<p><i class="fa fa-circle" style="color:red"></i> < 40%</p>
+</div>
+    
+            <div class="folium-map" id="map_3e522f4f6d4724663ac12e4d4adac8c7" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_3e522f4f6d4724663ac12e4d4adac8c7 = L.map(
+                "map_3e522f4f6d4724663ac12e4d4adac8c7",
+                {
+                    center: [49.0, 31.5],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 6,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_97af9ecf66e40440ebc954d9bd572d45 = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 20,
+  "maxNativeZoom": 20,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e",
+  "subdomains": "abcd",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_97af9ecf66e40440ebc954d9bd572d45.addTo(map_3e522f4f6d4724663ac12e4d4adac8c7);
+        
+    
+            var circle_marker_b24b21fe6f558770d663b5fc1f3aa7e1 = L.circleMarker(
+                [49.1460165, 31.2271744],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 25.25, "stroke": true, "weight": 3}
+            ).addTo(map_3e522f4f6d4724663ac12e4d4adac8c7);
+        
+    
+        var popup_bda94e04c07a0ce1d483e72db34df99c = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_386dcee54b2897d008960432e7c191bf = $(`<div id="html_386dcee54b2897d008960432e7c191bf" style="width: 100.0%; height: 100.0%;">     <b>Cherkasy oblast</b><br>     Total launched: 4650<br>     Total destroyed: 3098<br>     Success rate: 66.60%<br>     Num attacks: 29     </div>`)[0];
+                popup_bda94e04c07a0ce1d483e72db34df99c.setContent(html_386dcee54b2897d008960432e7c191bf);
+            
+        
+
+        circle_marker_b24b21fe6f558770d663b5fc1f3aa7e1.bindPopup(popup_bda94e04c07a0ce1d483e72db34df99c)
+        ;
+
+        
+    
+    
+            var circle_marker_c09dc66ba51d19ab7047bf9b434d6af3 = L.circleMarker(
+                [51.272593, 31.7417235],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 40.545, "stroke": true, "weight": 3}
+            ).addTo(map_3e522f4f6d4724663ac12e4d4adac8c7);
+        
+    
+        var popup_7dbab2bc910f4b8cd914c3eba2793112 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_350e924e95e52a13c0cc09385bcd2f62 = $(`<div id="html_350e924e95e52a13c0cc09385bcd2f62" style="width: 100.0%; height: 100.0%;">     <b>Chernihiv oblast</b><br>     Total launched: 7709<br>     Total destroyed: 5672<br>     Success rate: 73.60%<br>     Num attacks: 37     </div>`)[0];
+                popup_7dbab2bc910f4b8cd914c3eba2793112.setContent(html_350e924e95e52a13c0cc09385bcd2f62);
+            
+        
+
+        circle_marker_c09dc66ba51d19ab7047bf9b434d6af3.bindPopup(popup_7dbab2bc910f4b8cd914c3eba2793112)
+        ;
+
+        
+    
+    
+            var circle_marker_3cd834d5b1fcf6e5521b71d791ae3d03 = L.circleMarker(
+                [48.3810791, 26.1081673],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5.859999999999999, "stroke": true, "weight": 3}
+            ).addTo(map_3e522f4f6d4724663ac12e4d4adac8c7);
+        
+    
+        var popup_aaebcaf41076c2fee3b3ba9fd8374547 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_3acef90abc56d38623c3ac5ec0c924f2 = $(`<div id="html_3acef90abc56d38623c3ac5ec0c924f2" style="width: 100.0%; height: 100.0%;">     <b>Chernivtsi oblast</b><br>     Total launched: 772<br>     Total destroyed: 410<br>     Success rate: 53.10%<br>     Num attacks: 2     </div>`)[0];
+                popup_aaebcaf41076c2fee3b3ba9fd8374547.setContent(html_3acef90abc56d38623c3ac5ec0c924f2);
+            
+        
+
+        circle_marker_3cd834d5b1fcf6e5521b71d791ae3d03.bindPopup(popup_aaebcaf41076c2fee3b3ba9fd8374547)
+        ;
+
+        
+    
+    
+            var circle_marker_c95116c0b03aec8a018f31fa2ba138ff = L.circleMarker(
+                [48.662589, 34.9501715],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 86.45, "stroke": true, "weight": 3}
+            ).addTo(map_3e522f4f6d4724663ac12e4d4adac8c7);
+        
+    
+        var popup_f210e08d44d033a08bd6c1c3556dcc0c = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_305ed0d68b0fc5fadd033f35caa086d8 = $(`<div id="html_305ed0d68b0fc5fadd033f35caa086d8" style="width: 100.0%; height: 100.0%;">     <b>Dnipropetrovsk oblast</b><br>     Total launched: 16890<br>     Total destroyed: 11414<br>     Success rate: 67.60%<br>     Num attacks: 93     </div>`)[0];
+                popup_f210e08d44d033a08bd6c1c3556dcc0c.setContent(html_305ed0d68b0fc5fadd033f35caa086d8);
+            
+        
+
+        circle_marker_c95116c0b03aec8a018f31fa2ba138ff.bindPopup(popup_f210e08d44d033a08bd6c1c3556dcc0c)
+        ;
+
+        
+    
+    
+            var circle_marker_7621b0e36e8eed0dc0e63a06c24bdbad = L.circleMarker(
+                [47.9212914, 37.7809825],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 71.145, "stroke": true, "weight": 3}
+            ).addTo(map_3e522f4f6d4724663ac12e4d4adac8c7);
+        
+    
+        var popup_4589163e6d491c4eec0e902c8fd2850b = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_66eba38177419a04b3d471f6fd034cef = $(`<div id="html_66eba38177419a04b3d471f6fd034cef" style="width: 100.0%; height: 100.0%;">     <b>Donetsk oblast</b><br>     Total launched: 13829<br>     Total destroyed: 9182<br>     Success rate: 66.40%<br>     Num attacks: 83     </div>`)[0];
+                popup_4589163e6d491c4eec0e902c8fd2850b.setContent(html_66eba38177419a04b3d471f6fd034cef);
+            
+        
+
+        circle_marker_7621b0e36e8eed0dc0e63a06c24bdbad.bindPopup(popup_4589163e6d491c4eec0e902c8fd2850b)
+        ;
+
+        
+    
+    
+            var circle_marker_7daa862d775b4fb94b671832c80dadc2 = L.circleMarker(
+                [48.7481718, 24.5207477],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 23.02, "stroke": true, "weight": 3}
+            ).addTo(map_3e522f4f6d4724663ac12e4d4adac8c7);
+        
+    
+        var popup_4d92590a0136a322a9b0a1808eda1cc8 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_7046ccf088a6e1c072b3e1215b3c5fa1 = $(`<div id="html_7046ccf088a6e1c072b3e1215b3c5fa1" style="width: 100.0%; height: 100.0%;">     <b>Ivano-Frankivsk oblast</b><br>     Total launched: 4204<br>     Total destroyed: 3384<br>     Success rate: 80.50%<br>     Num attacks: 11     </div>`)[0];
+                popup_4d92590a0136a322a9b0a1808eda1cc8.setContent(html_7046ccf088a6e1c072b3e1215b3c5fa1);
+            
+        
+
+        circle_marker_7daa862d775b4fb94b671832c80dadc2.bindPopup(popup_4d92590a0136a322a9b0a1808eda1cc8)
+        ;
+
+        
+    
+    
+            var circle_marker_748ed8fa889340511e5656b72bd3c34a = L.circleMarker(
+                [49.8299582, 36.3788957],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 98.05, "stroke": true, "weight": 3}
+            ).addTo(map_3e522f4f6d4724663ac12e4d4adac8c7);
+        
+    
+        var popup_34cfa0e9e69413a90df4ffef4a4af33b = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_01d7f4930854576afd71dd5391499d5b = $(`<div id="html_01d7f4930854576afd71dd5391499d5b" style="width: 100.0%; height: 100.0%;">     <b>Kharkiv oblast</b><br>     Total launched: 19210<br>     Total destroyed: 11850<br>     Success rate: 61.70%<br>     Num attacks: 122     </div>`)[0];
+                popup_34cfa0e9e69413a90df4ffef4a4af33b.setContent(html_01d7f4930854576afd71dd5391499d5b);
+            
+        
+
+        circle_marker_748ed8fa889340511e5656b72bd3c34a.bindPopup(popup_34cfa0e9e69413a90df4ffef4a4af33b)
+        ;
+
+        
+    
+    
+            var circle_marker_7a65bc4594f382a817ae8702017324a6 = L.circleMarker(
+                [46.5421715, 33.4079326],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2.4, "stroke": true, "weight": 3}
+            ).addTo(map_3e522f4f6d4724663ac12e4d4adac8c7);
+        
+    
+        var popup_9a9512ac053a41cf79614ca406a4063f = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_07515c7abeef561e9f4d5da73e4141f9 = $(`<div id="html_07515c7abeef561e9f4d5da73e4141f9" style="width: 100.0%; height: 100.0%;">     <b>Kherson oblast</b><br>     Total launched: 80<br>     Total destroyed: 15<br>     Success rate: 18.80%<br>     Num attacks: 1     </div>`)[0];
+                popup_9a9512ac053a41cf79614ca406a4063f.setContent(html_07515c7abeef561e9f4d5da73e4141f9);
+            
+        
+
+        circle_marker_7a65bc4594f382a817ae8702017324a6.bindPopup(popup_9a9512ac053a41cf79614ca406a4063f)
+        ;
+
+        
+    
+    
+            var circle_marker_6a36443574d430b1cbf046f3de472025 = L.circleMarker(
+                [49.268624, 27.0635998],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 30.65, "stroke": true, "weight": 3}
+            ).addTo(map_3e522f4f6d4724663ac12e4d4adac8c7);
+        
+    
+        var popup_5fb2bdd9f686ca002568cdbf3c211745 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_d4174e2be74a566a555889d78b2b7ef7 = $(`<div id="html_d4174e2be74a566a555889d78b2b7ef7" style="width: 100.0%; height: 100.0%;">     <b>Khmelnytskyi oblast</b><br>     Total launched: 5730<br>     Total destroyed: 4225<br>     Success rate: 73.70%<br>     Num attacks: 17     </div>`)[0];
+                popup_5fb2bdd9f686ca002568cdbf3c211745.setContent(html_d4174e2be74a566a555889d78b2b7ef7);
+            
+        
+
+        circle_marker_6a36443574d430b1cbf046f3de472025.bindPopup(popup_5fb2bdd9f686ca002568cdbf3c211745)
+        ;
+
+        
+    
+    
+            var circle_marker_c4b59e25e2309876e73697e2c0f363c6 = L.circleMarker(
+                [48.1916774, 31.6902953],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 19.535, "stroke": true, "weight": 3}
+            ).addTo(map_3e522f4f6d4724663ac12e4d4adac8c7);
+        
+    
+        var popup_6ab917580ff277f0770cd31de572d959 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_bf810b1952e7334ae60203ee4db1599e = $(`<div id="html_bf810b1952e7334ae60203ee4db1599e" style="width: 100.0%; height: 100.0%;">     <b>Kirovohrad oblast</b><br>     Total launched: 3507<br>     Total destroyed: 2530<br>     Success rate: 72.10%<br>     Num attacks: 16     </div>`)[0];
+                popup_6ab917580ff277f0770cd31de572d959.setContent(html_bf810b1952e7334ae60203ee4db1599e);
+            
+        
+
+        circle_marker_c4b59e25e2309876e73697e2c0f363c6.bindPopup(popup_6ab917580ff277f0770cd31de572d959)
+        ;
+
+        
+    
+    
+            var circle_marker_024afea72aeeee2bfe8629c5c0f6cfc4 = L.circleMarker(
+                [47.9102734, 33.3917703],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2.615, "stroke": true, "weight": 3}
+            ).addTo(map_3e522f4f6d4724663ac12e4d4adac8c7);
+        
+    
+        var popup_352ba1070ca006293519f319aadd8db0 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_0d964cbb62cbeddd6a97db6028a71889 = $(`<div id="html_0d964cbb62cbeddd6a97db6028a71889" style="width: 100.0%; height: 100.0%;">     <b>Kryvyi Rih</b><br>     Total launched: 123<br>     Total destroyed: 71<br>     Success rate: 57.70%<br>     Num attacks: 1     </div>`)[0];
+                popup_352ba1070ca006293519f319aadd8db0.setContent(html_0d964cbb62cbeddd6a97db6028a71889);
+            
+        
+
+        circle_marker_024afea72aeeee2bfe8629c5c0f6cfc4.bindPopup(popup_352ba1070ca006293519f319aadd8db0)
+        ;
+
+        
+    
+    
+            var circle_marker_03887f5349c3347f81f1787b58323fd6 = L.circleMarker(
+                [50.4500336, 30.5241361],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8.725, "stroke": true, "weight": 3}
+            ).addTo(map_3e522f4f6d4724663ac12e4d4adac8c7);
+        
+    
+        var popup_95ee638c4135d91d80d14b427b53a559 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_8b9d11a850ee232d6842c61e13737107 = $(`<div id="html_8b9d11a850ee232d6842c61e13737107" style="width: 100.0%; height: 100.0%;">     <b>Kyiv</b><br>     Total launched: 1345<br>     Total destroyed: 659<br>     Success rate: 49.00%<br>     Num attacks: 4     </div>`)[0];
+                popup_95ee638c4135d91d80d14b427b53a559.setContent(html_8b9d11a850ee232d6842c61e13737107);
+            
+        
+
+        circle_marker_03887f5349c3347f81f1787b58323fd6.bindPopup(popup_95ee638c4135d91d80d14b427b53a559)
+        ;
+
+        
+    
+    
+            var circle_marker_070cc51e7189628723d5bb69a0d43576 = L.circleMarker(
+                [50.178595, 30.4924884],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 99.285, "stroke": true, "weight": 3}
+            ).addTo(map_3e522f4f6d4724663ac12e4d4adac8c7);
+        
+    
+        var popup_e32049d6038203de540a3bb22cf0c7e1 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_712b97e22d8b37749dc9ed5f4be29467 = $(`<div id="html_712b97e22d8b37749dc9ed5f4be29467" style="width: 100.0%; height: 100.0%;">     <b>Kyiv oblast</b><br>     Total launched: 19457<br>     Total destroyed: 13421<br>     Success rate: 69.00%<br>     Num attacks: 84     </div>`)[0];
+                popup_e32049d6038203de540a3bb22cf0c7e1.setContent(html_712b97e22d8b37749dc9ed5f4be29467);
+            
+        
+
+        circle_marker_070cc51e7189628723d5bb69a0d43576.bindPopup(popup_e32049d6038203de540a3bb22cf0c7e1)
+        ;
+
+        
+    
+    
+            var circle_marker_f62a511415fc5a346b5b7278b21ce916 = L.circleMarker(
+                [50.7481125, 25.3248667],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5.265000000000001, "stroke": true, "weight": 3}
+            ).addTo(map_3e522f4f6d4724663ac12e4d4adac8c7);
+        
+    
+        var popup_1437f9b5431b23047bb681bb73363b58 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_1b59748ad57dfde62dc15b45d21649e2 = $(`<div id="html_1b59748ad57dfde62dc15b45d21649e2" style="width: 100.0%; height: 100.0%;">     <b>Lutsk oblast</b><br>     Total launched: 653<br>     Total destroyed: 585<br>     Success rate: 89.60%<br>     Num attacks: 1     </div>`)[0];
+                popup_1437f9b5431b23047bb681bb73363b58.setContent(html_1b59748ad57dfde62dc15b45d21649e2);
+            
+        
+
+        circle_marker_f62a511415fc5a346b5b7278b21ce916.bindPopup(popup_1437f9b5431b23047bb681bb73363b58)
+        ;
+
+        
+    
+    
+            var circle_marker_9297feb69aa05c62e3e8c76dfaa3e87a = L.circleMarker(
+                [49.6512234, 23.8266948],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 30.38, "stroke": true, "weight": 3}
+            ).addTo(map_3e522f4f6d4724663ac12e4d4adac8c7);
+        
+    
+        var popup_cb409fed167c3147e21861aaea36fd87 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_3af1430bdb79bf93880b4554de605546 = $(`<div id="html_3af1430bdb79bf93880b4554de605546" style="width: 100.0%; height: 100.0%;">     <b>Lviv oblast</b><br>     Total launched: 5676<br>     Total destroyed: 4349<br>     Success rate: 76.60%<br>     Num attacks: 11     </div>`)[0];
+                popup_cb409fed167c3147e21861aaea36fd87.setContent(html_3af1430bdb79bf93880b4554de605546);
+            
+        
+
+        circle_marker_9297feb69aa05c62e3e8c76dfaa3e87a.bindPopup(popup_cb409fed167c3147e21861aaea36fd87)
+        ;
+
+        
+    
+    
+            var circle_marker_c69157dfcb90b925673b02066e94d1ab = L.circleMarker(
+                [47.3886032, 31.9442334],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15.225, "stroke": true, "weight": 3}
+            ).addTo(map_3e522f4f6d4724663ac12e4d4adac8c7);
+        
+    
+        var popup_3dfaf0159bb9a7d0fb378b7aa09c0c18 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_df0deed34c884c8f326cc133b7552354 = $(`<div id="html_df0deed34c884c8f326cc133b7552354" style="width: 100.0%; height: 100.0%;">     <b>Mykolaiv oblast</b><br>     Total launched: 2645<br>     Total destroyed: 1662<br>     Success rate: 62.80%<br>     Num attacks: 15     </div>`)[0];
+                popup_3dfaf0159bb9a7d0fb378b7aa09c0c18.setContent(html_df0deed34c884c8f326cc133b7552354);
+            
+        
+
+        circle_marker_c69157dfcb90b925673b02066e94d1ab.bindPopup(popup_3dfaf0159bb9a7d0fb378b7aa09c0c18)
+        ;
+
+        
+    
+    
+            var circle_marker_58756df549972218b314bfeda6dcd487 = L.circleMarker(
+                [46.1147226, 29.9567193],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 83.355, "stroke": true, "weight": 3}
+            ).addTo(map_3e522f4f6d4724663ac12e4d4adac8c7);
+        
+    
+        var popup_2495df6e20ada5d3d17bdf087ea3dff1 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_68103aafe2478dd5ef2fe602dfe004dc = $(`<div id="html_68103aafe2478dd5ef2fe602dfe004dc" style="width: 100.0%; height: 100.0%;">     <b>Odesa oblast</b><br>     Total launched: 16271<br>     Total destroyed: 11302<br>     Success rate: 69.50%<br>     Num attacks: 85     </div>`)[0];
+                popup_2495df6e20ada5d3d17bdf087ea3dff1.setContent(html_68103aafe2478dd5ef2fe602dfe004dc);
+            
+        
+
+        circle_marker_58756df549972218b314bfeda6dcd487.bindPopup(popup_2495df6e20ada5d3d17bdf087ea3dff1)
+        ;
+
+        
+    
+    
+            var circle_marker_0c66c5a306f1019a87480e23d3e46b7f = L.circleMarker(
+                [49.8607809, 33.7498787],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 48.65, "stroke": true, "weight": 3}
+            ).addTo(map_3e522f4f6d4724663ac12e4d4adac8c7);
+        
+    
+        var popup_7c59cb9e4e7c5b70cb31d8b1ddbc235b = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_80facef3fb37935ea98d98c85b45697a = $(`<div id="html_80facef3fb37935ea98d98c85b45697a" style="width: 100.0%; height: 100.0%;">     <b>Poltava oblast</b><br>     Total launched: 9330<br>     Total destroyed: 6469<br>     Success rate: 69.30%<br>     Num attacks: 40     </div>`)[0];
+                popup_7c59cb9e4e7c5b70cb31d8b1ddbc235b.setContent(html_80facef3fb37935ea98d98c85b45697a);
+            
+        
+
+        circle_marker_0c66c5a306f1019a87480e23d3e46b7f.bindPopup(popup_7c59cb9e4e7c5b70cb31d8b1ddbc235b)
+        ;
+
+        
+    
+    
+            var circle_marker_19f0f4c05000c2b1ed4d151844a067db = L.circleMarker(
+                [51.2074112, 26.5208033],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9.385, "stroke": true, "weight": 3}
+            ).addTo(map_3e522f4f6d4724663ac12e4d4adac8c7);
+        
+    
+        var popup_a997d872a0bc505e0d60b0e1673bcf23 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_db87afff3d86d08e5513b79afb5435d7 = $(`<div id="html_db87afff3d86d08e5513b79afb5435d7" style="width: 100.0%; height: 100.0%;">     <b>Rivne oblast</b><br>     Total launched: 1477<br>     Total destroyed: 1184<br>     Success rate: 80.20%<br>     Num attacks: 3     </div>`)[0];
+                popup_a997d872a0bc505e0d60b0e1673bcf23.setContent(html_db87afff3d86d08e5513b79afb5435d7);
+            
+        
+
+        circle_marker_19f0f4c05000c2b1ed4d151844a067db.bindPopup(popup_a997d872a0bc505e0d60b0e1673bcf23)
+        ;
+
+        
+    
+    
+            var circle_marker_e042b3d429a18b4868717c2038168501 = L.circleMarker(
+                [50.7696518, 34.3289305],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 91.315, "stroke": true, "weight": 3}
+            ).addTo(map_3e522f4f6d4724663ac12e4d4adac8c7);
+        
+    
+        var popup_81de48bd25a4a1fde9b30dcc7f171196 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_4fa4c6083e00421300c2e1dd6d217c32 = $(`<div id="html_4fa4c6083e00421300c2e1dd6d217c32" style="width: 100.0%; height: 100.0%;">     <b>Sumy oblast</b><br>     Total launched: 17863<br>     Total destroyed: 11756<br>     Success rate: 65.80%<br>     Num attacks: 110     </div>`)[0];
+                popup_81de48bd25a4a1fde9b30dcc7f171196.setContent(html_4fa4c6083e00421300c2e1dd6d217c32);
+            
+        
+
+        circle_marker_e042b3d429a18b4868717c2038168501.bindPopup(popup_81de48bd25a4a1fde9b30dcc7f171196)
+        ;
+
+        
+    
+    
+            var circle_marker_8af97e424c9974c547e7a805e5c20bcb = L.circleMarker(
+                [49.6630002, 25.6167516],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9.515, "stroke": true, "weight": 3}
+            ).addTo(map_3e522f4f6d4724663ac12e4d4adac8c7);
+        
+    
+        var popup_9eb11e5cbf805a5cdbfd3c984f30da8b = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_e0ce9f9b818f405aca397b6312d578f1 = $(`<div id="html_e0ce9f9b818f405aca397b6312d578f1" style="width: 100.0%; height: 100.0%;">     <b>Ternopil oblast</b><br>     Total launched: 1503<br>     Total destroyed: 941<br>     Success rate: 62.60%<br>     Num attacks: 4     </div>`)[0];
+                popup_9eb11e5cbf805a5cdbfd3c984f30da8b.setContent(html_e0ce9f9b818f405aca397b6312d578f1);
+            
+        
+
+        circle_marker_8af97e424c9974c547e7a805e5c20bcb.bindPopup(popup_9eb11e5cbf805a5cdbfd3c984f30da8b)
+        ;
+
+        
+    
+    
+            var circle_marker_e2222ec0418fe5478b24273fc056bc2e = L.circleMarker(
+                [49.4871968, 31.2718321],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5.265000000000001, "stroke": true, "weight": 3}
+            ).addTo(map_3e522f4f6d4724663ac12e4d4adac8c7);
+        
+    
+        var popup_67e653b39ac2e21c0f1ebcf97de5f076 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_654119117f0ca31390fcacae3d6101e1 = $(`<div id="html_654119117f0ca31390fcacae3d6101e1" style="width: 100.0%; height: 100.0%;">     <b>Ukraine</b><br>     Total launched: 653<br>     Total destroyed: 372<br>     Success rate: 57.00%<br>     Num attacks: 2     </div>`)[0];
+                popup_67e653b39ac2e21c0f1ebcf97de5f076.setContent(html_654119117f0ca31390fcacae3d6101e1);
+            
+        
+
+        circle_marker_e2222ec0418fe5478b24273fc056bc2e.bindPopup(popup_67e653b39ac2e21c0f1ebcf97de5f076)
+        ;
+
+        
+    
+    
+            var circle_marker_c9676c0d4dbb2ef224ad620ae7480a55 = L.circleMarker(
+                [48.8990315, 28.516068],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12.71, "stroke": true, "weight": 3}
+            ).addTo(map_3e522f4f6d4724663ac12e4d4adac8c7);
+        
+    
+        var popup_ec205b635e0d98c3359b35858eb6cf81 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_e8aa556ee19836d83ab1a8f7aa8be718 = $(`<div id="html_e8aa556ee19836d83ab1a8f7aa8be718" style="width: 100.0%; height: 100.0%;">     <b>Vinnytsia oblast</b><br>     Total launched: 2142<br>     Total destroyed: 1983<br>     Success rate: 92.60%<br>     Num attacks: 4     </div>`)[0];
+                popup_ec205b635e0d98c3359b35858eb6cf81.setContent(html_e8aa556ee19836d83ab1a8f7aa8be718);
+            
+        
+
+        circle_marker_c9676c0d4dbb2ef224ad620ae7480a55.bindPopup(popup_ec205b635e0d98c3359b35858eb6cf81)
+        ;
+
+        
+    
+    
+            var circle_marker_ccb62227da648699ed05ef957e5a0817 = L.circleMarker(
+                [51.5451167, 24.6627893],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 17.915, "stroke": true, "weight": 3}
+            ).addTo(map_3e522f4f6d4724663ac12e4d4adac8c7);
+        
+    
+        var popup_572a88a563ea30eede9ab9aefa7e015e = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_9cd42f2fe6222667443df1504f98b4b1 = $(`<div id="html_9cd42f2fe6222667443df1504f98b4b1" style="width: 100.0%; height: 100.0%;">     <b>Volyn oblast</b><br>     Total launched: 3183<br>     Total destroyed: 2460<br>     Success rate: 77.30%<br>     Num attacks: 7     </div>`)[0];
+                popup_572a88a563ea30eede9ab9aefa7e015e.setContent(html_9cd42f2fe6222667443df1504f98b4b1);
+            
+        
+
+        circle_marker_ccb62227da648699ed05ef957e5a0817.bindPopup(popup_572a88a563ea30eede9ab9aefa7e015e)
+        ;
+
+        
+    
+    
+            var circle_marker_a6f9581718d7b77c1a1586686c20c274 = L.circleMarker(
+                [48.2953664, 23.4466092],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4.87, "stroke": true, "weight": 3}
+            ).addTo(map_3e522f4f6d4724663ac12e4d4adac8c7);
+        
+    
+        var popup_509bdd9dfe10cb3da181058ed06fcc67 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_c9873ea80e24525b73b5fe0ae8028530 = $(`<div id="html_c9873ea80e24525b73b5fe0ae8028530" style="width: 100.0%; height: 100.0%;">     <b>Zakarpattia oblast</b><br>     Total launched: 574<br>     Total destroyed: 546<br>     Success rate: 95.10%<br>     Num attacks: 1     </div>`)[0];
+                popup_509bdd9dfe10cb3da181058ed06fcc67.setContent(html_c9873ea80e24525b73b5fe0ae8028530);
+            
+        
+
+        circle_marker_a6f9581718d7b77c1a1586686c20c274.bindPopup(popup_509bdd9dfe10cb3da181058ed06fcc67)
+        ;
+
+        
+    
+    
+            var circle_marker_6b71a6d291a4342e8ebdff0043b1be43 = L.circleMarker(
+                [46.4609198, 34.8643071],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 48.67, "stroke": true, "weight": 3}
+            ).addTo(map_3e522f4f6d4724663ac12e4d4adac8c7);
+        
+    
+        var popup_e3d70ff4d1f6f787498bfcbf78bfadad = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_eba6c00c9e8fe67a0d3e222653a66fc7 = $(`<div id="html_eba6c00c9e8fe67a0d3e222653a66fc7" style="width: 100.0%; height: 100.0%;">     <b>Zaporizhzhia oblast</b><br>     Total launched: 9334<br>     Total destroyed: 7086<br>     Success rate: 75.90%<br>     Num attacks: 37     </div>`)[0];
+                popup_e3d70ff4d1f6f787498bfcbf78bfadad.setContent(html_eba6c00c9e8fe67a0d3e222653a66fc7);
+            
+        
+
+        circle_marker_6b71a6d291a4342e8ebdff0043b1be43.bindPopup(popup_e3d70ff4d1f6f787498bfcbf78bfadad)
+        ;
+
+        
+    
+    
+            var circle_marker_d365749197438bd4698e0b60db8079f6 = L.circleMarker(
+                [50.9080532, 28.3867504],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 24.765, "stroke": true, "weight": 3}
+            ).addTo(map_3e522f4f6d4724663ac12e4d4adac8c7);
+        
+    
+        var popup_aeb9d19021c7aaee614f71506459d2a4 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_55f1f7afc64fe5075a2734b52eaa9142 = $(`<div id="html_55f1f7afc64fe5075a2734b52eaa9142" style="width: 100.0%; height: 100.0%;">     <b>Zhytomyr oblast</b><br>     Total launched: 4553<br>     Total destroyed: 3211<br>     Success rate: 70.50%<br>     Num attacks: 17     </div>`)[0];
+                popup_aeb9d19021c7aaee614f71506459d2a4.setContent(html_55f1f7afc64fe5075a2734b52eaa9142);
+            
+        
+
+        circle_marker_d365749197438bd4698e0b60db8079f6.bindPopup(popup_aeb9d19021c7aaee614f71506459d2a4)
+        ;
+
+        
+    
+</script>
+</html>
